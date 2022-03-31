@@ -25,6 +25,8 @@ const ReviewItem = (props) => {
                               
                             <FontAwesomeIcon className='review-item-deleteBtn' icon={faTrashAlt}></FontAwesomeIcon> 
                         </button>
+
+                        
                    </div>
             </div>
 
