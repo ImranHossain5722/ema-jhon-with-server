@@ -1,7 +1,7 @@
 import React, {useState}  from 'react';
 import { useSignInWithEmailAndPassword} from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init'
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate,useLocation } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
@@ -12,6 +12,9 @@ const Login = () => {
 
   const navigate = useNavigate('')
 
+  const location = useLocation()
+  const from =location.state?.from?.pathname || '/'
+
     const handelEmailBlur =event =>{
         setEmail(event.target.value)
     }
@@ -21,7 +24,7 @@ const Login = () => {
     }
 
     if(user){
-        navigate('/shop')
+        navigate(from,{replace:true})
     }
     const handelLoginSubmit =event =>{
         event.preventDefault();
