@@ -1,15 +1,27 @@
 .shop-container{
     display: grid;
     grid-template-columns: 4fr 1fr;
+    padding-bottom:20px ;
 }
 
 .products{
 
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(2, 1fr);
     gap: 45px;
     margin: 100px 0px 0px 30px;
 
+}
+.pagination button{
+    margin-right: 10px;
+    background-color: white;
+    border: 1px solid orange
+
+}
+
+.pagination .selected{
+    background-color: orange;
+    color: white;
 }
 
 .orderSummery{
